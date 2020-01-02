@@ -46,10 +46,13 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
     <link rel="manifest" href="../favicon/site.webmanifest">
 
-    <link rel='stylesheet' type='text/css' media='screen' href='../css/join.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../../css/team.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../../css/calendar.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../../css/slides.css'>
+    
 </head>
 
-<body>
+<body id="bodyID">
 
     <!-- PRELOADER START -->
     <div class="preloader-background">
@@ -102,6 +105,7 @@
             </div>
         </nav>
     </div>
+
     <!-- NAVBAR END -->
 
     <!-- SIDENAV START -->
@@ -119,26 +123,27 @@
     </ul>
     <!-- SIDENAV END -->
 
-    <!-- Particles.js START -->
-    <div class="main">
+    <!-- CONTENT START -->
 
+    <div class="main">
+    
         <div id="particles-js"></div>
         <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-        <!-- JOIN START -->
-        <div id="Join" class="join-section scrollspy">
-            <div class="container">
-                <div class="join-form">
-                    <iframe class="join-form-center"
-                        src="https://docs.google.com/forms/d/e/1FAIpQLSfXEJe5XEwW6KWMasa-8kPkuA-nnTvxlU5geXXtoUlYFYRcRA/viewform?embedded=true"
-                        width="640" height="2965" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-                </div>
+        <div class="container">
+            <div id="huh2" class="google-calendar-iframe">
+                <iframe id="iframeID" src="https://calendar.google.com/calendar/embed?src=orca959um7af74lt931bp5v1v0%40group.calendar.google.com&ctz=America%2FChicago" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
             </div>
-        </div>
-        <!-- JOIN END -->
+            <!-- <div class="google-slides-iframe">
+                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRpFLI1aSbngCZ-Q7HfqV7JKLTnqZjObPD0VpiF6xqIy6jvxBFNOctjvSSFD19aPDWgmvXQi549WNSN/embed?start=false&loop=false&delayms=3000"
+                frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+            
+            </div> -->
 
     </div>
-    <!-- Particles.js END -->
+    <!-- CONTENT END -->
+
+    </div>
+    <!-- CONTENT END -->
 
     <!-- FOOTER START -->
     <footer class="footer-section">
@@ -174,10 +179,10 @@
         </div>
     </footer>
     <!-- FOOTER END -->
-
+    
     <script src='../js/team.js'></script>
     <script src='../js/particles.js'></script>
     <script src="../libs/OwlCarousel2-2.3.4/js/owl.carousel.min.js"></script>
 </body>
-
+<link rel='stylesheet' type='text/css' media='screen' href='../../css/calendar.css'>
 </html>

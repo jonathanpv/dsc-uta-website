@@ -214,10 +214,25 @@ canvas {
     color: #FFFFFF;
 }
 
+.landing-title-black {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 600;
+    color: #4E4E4E;
+}
+
 .landing-desciption {
     text-align: center;
     font-size: 1.35rem;
     color: #FFFFFF;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.landing-desciption-black {
+    text-align: center;
+    font-size: 1.35rem;
+    color: #4E4E4E;
     padding-left: 80px;
     padding-right: 80px;
 }
@@ -247,11 +262,11 @@ canvas {
 }
 
 #slide1 {
-    background: url('../images/events/1.JPG');
+    background: url('../images/events/dsc-event.JPG');
 }
 
 #slide2 {
-    background: url('../images/events/info.jpg');
+    background: url('../images/events/dsc-event2.jpg');
 }
 
 #slide3 {

@@ -204,7 +204,7 @@ canvas {
 }
 
 .about-section-img {
-    background-image: url('../images/events/1.JPG');
+    background-image: url('../images/events/dsc-group.jpg');
     background-size: cover;
     background-position: center;
     width: auto;
@@ -470,7 +470,11 @@ canvas {
 }
 
 .footer-social-media {
+    margin-top: 50px;
     text-align: center;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #4E4E4E;
 }
 
 .social-media-title {
@@ -480,25 +484,25 @@ canvas {
     font-weight: 400;
 }
 
-.footer-social-media .linkedin {
+.social-media-title .linkedin {
     color: #0077B5;
     font-size: 40px;
     padding: 10px;
 }
 
-.footer-social-media .instagram {
+.social-media-title .instagram {
     color: #BC2A8D;
     font-size: 40px;
     padding: 10px;
 }
 
-.footer-social-media .twitter {
+.social-media-title .twitter {
     color: #1DA1F2;
     font-size: 40px;
     padding: 10px;
 }
 
-.footer-social-media .discord {
+.social-media-title .discord {
     color: #7289DA;
     font-size: 40px;
     padding: 10px;

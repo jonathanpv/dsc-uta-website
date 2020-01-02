@@ -4,11 +4,9 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Developer Student Club UTA - Powered By Google Developers</title>
-    <!-- TODO: Combine this statement with the one below it
-        SRM Developer Student Club (DSC SRM) is a Google Developers program for SRM IST students to learn mobile and web development skills. -->
+    <title>DSC - University of Texas at Arlington</title>
     <meta name="description"
-        content="Google collaborates with university students who are passionate about growing developer communities and support them with starting student clubs on their campuses.">
+        content="Helping students bridge the gap between theory and practice. Supported by Google Developers.">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 
     <!-- jQuery CDN and Popper.js CDN -->
@@ -34,7 +32,7 @@
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap"
         rel="stylesheet">
 
-    <!-- Font Icons -->
+    <!-- Material Design Icons -->
     <script src="https://kit.fontawesome.com/6aec46af78.js"></script>
 
     <!-- Google Material Icons -->
@@ -46,11 +44,24 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
     <link rel="manifest" href="../favicon/site.webmanifest">
 
-    <link rel='stylesheet' type='text/css' media='screen' href='../css/join.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/index.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/calendar.css'>
+
+    <!--calendar javacript -->
+    <!-- <script src="https://apis.google.com/js/api.js"></script> -->
+    <script src="../js/get-date.js"></script>
+    <script src="../js/calendar-api.js"></script>
+    
+    
+    <!-- <script src="../js/getEvents.js"></script> -->
+    
 </head>
 
 <body>
-
+    <!-- <script type="text/javacript" src="https://apis.google.com/js/api.js"></script> -->
+    <!-- <script type="text/javacript" src="../js/calendar.js"></script> -->
+    
+    <!-- <button onclick="authenticate().then(loadClient)">load and execute</button> -->
     <!-- PRELOADER START -->
     <div class="preloader-background">
         <div class="loading">
@@ -69,7 +80,7 @@
     <div class="navbar-fixed">
         <nav class="whiteNav" role="navigation">
             <div class="nav-wrapper container">
-                <a href="/" class="brand-logo">
+                <a href="#Home" class="brand-logo">
                     <div class="center-brand">
                         <img class="dsc-logo" src="../images/dsc-logo-2.png">
                         <span class="dsc-brand hide-on-small-only">&nbsp;&nbsp;DSC UTA</span>
@@ -83,18 +94,19 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/team">Our Team</a>
                     </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="/events">Events</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/#Gallery">Gallery</a>
+                        <a class="nav-link" href="#Gallery">Gallery</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/#Contact">Contact</a>
+                        <a class="nav-link" href="#Contact">Contact</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/dsc.csusm/"><i
+                    <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/dsc.UTA/"><i
                                 class="fab fa-instagram"></i></a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://twitter.com/dsccsusm"><i
+                    <li class="nav-item"><a class="nav-link" href="https://twitter.com/dscUTA"><i
                                 class="fab fa-twitter"></i></a></li>
                     <li class="nav-item"><a class="nav-link" href="https://discord.gg/x9HpdPk"><i
                                 class="fab fa-discord"></i></a></li>
@@ -106,10 +118,10 @@
 
     <!-- SIDENAV START -->
     <ul class="sidenav" id="mobile-nav">
-        <li><a class="menu-items" href="/#AboutUs">About Us</a></li>
+        <li><a class="menu-items" href="#AboutUs">About Us</a></li>
         <li><a class="menu-items" href="/events">Events</a></li>
         <li><a class="menu-items" href="/team">Our Team</a></li>
-        <li><a class="menu-items" href="/#Contact">Contact</a></li>
+        <li><a class="menu-items" href="#Contact">Contact</a></li>
         <li><a class="menu-items" href="https://www.instagram.com/dsc.UTA/"><i
             class="fab fa-instagram"></i></a></li>
         <li><a class="menu-items" href="https://twitter.com/dscUTA"><i
@@ -119,47 +131,47 @@
     </ul>
     <!-- SIDENAV END -->
 
-    <!-- Particles.js START -->
-    <div class="main">
-
-        <div id="particles-js"></div>
-        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-        <!-- JOIN START -->
-        <div id="Join" class="join-section scrollspy">
-            <div class="container">
-                <div class="join-form">
-                    <iframe class="join-form-center"
-                        src="https://docs.google.com/forms/d/e/1FAIpQLSfXEJe5XEwW6KWMasa-8kPkuA-nnTvxlU5geXXtoUlYFYRcRA/viewform?embedded=true"
-                        width="640" height="2965" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-                </div>
-            </div>
+    <!-- CONTENT START -->
+    <div class="container-calendar">
+      <div class="calendar light">
+        <div class="calendar_header">
+          <h1 class = "header_title">Welcome Back</h1>
+          <p class="header_copy"> Calendar Plan</p>
         </div>
-        <!-- JOIN END -->
-
+        <div class="calendar_plan">
+          <div class="cl_plan">
+            <div class="cl_title">Today</div>
+            <div id="current_date" class="cl_copy"></div>
+            
+            <div class="cl_add">
+              <i class="fas fa-plus"></i>
+            </div>
+          </div>
+        </div>
+        <div id="white_calendar" class="calendar_events">
+          <p class="ce_title">Upcoming Events</p>
+        </div>
+      </div>
     </div>
-    <!-- Particles.js END -->
-
+      <!-- CONTENT END -->
+    
     <!-- FOOTER START -->
     <footer class="footer-section">
         <div class="container">
             <div class="row">
                 <div class="col s12">
                     <h5 class="text-gray footer-title">DSC UTA - Powered by Google Developers</h5>
-                    <p class="text-gray footer-location">California State University San Marcos
-                        <br>San Marcos, CA 92096, USA
-                    </p>
+                    <p class="text-gray footer-location">The University of Texas at Arlington<br>Arlington, TX 76019, USA</p>
                 </div>
             </div>
             <!-- <div class="row footer-social-media-title">
-                    <h2 class="social-media-title">Follow us on</h2>
-                </div> -->
+                <h2 class="social-media-title">Follow us on</h2>
+            </div> -->
             <div class="row">
                 <div class="row">
                     <h2 class="social-media-title text-gray">Follow us on</h2>
-                    <div class="footer-social-media">
-                        <a class="instagram" href="https://www.instagram.com/dsc.UTA/"><i
-                                class="fab fa-instagram"></i></a>
+                    <div class="social-media-title">
+                        <a class="instagram" href="https://www.instagram.com/dsc.UTA/"><i class="fab fa-instagram"></i></a>
                         <a class="twitter" href="https://twitter.com/dscUTA"><i class="fab fa-twitter"></i></a>
                         <a class="discord" href="https://discord.gg/x9HpdPk"><i class="fab fa-discord"></i></a>
                     </div>
@@ -174,10 +186,10 @@
         </div>
     </footer>
     <!-- FOOTER END -->
-
-    <script src='../js/team.js'></script>
+    <script src='../js/index.js'></script>
     <script src='../js/particles.js'></script>
     <script src="../libs/OwlCarousel2-2.3.4/js/owl.carousel.min.js"></script>
+    <script src="../js/calendar.js"></script>
 </body>
 
 </html>
